@@ -126,13 +126,13 @@ const coordObj: POINT = {
 interface Person {
     name: string
 }
-                       
+
 interface Person {     //A propriedade age foi implementada na interface Person
     age: number
 }
 
 
-const somePerson: Person = {name: "Igor", age: 25}
+const somePerson: Person = { name: "Igor", age: 25 }
 
 type personType = {
     name: string
@@ -141,3 +141,15 @@ type personType = {
 /*type personType = {  //Erro de variável duplicada
     age: number
 } */
+
+//LITERAL TYPES
+
+//recurso que permite colocar valores como tipos
+//restringe o uso a tipos e valores
+//recurso muito utilizado com Union types
+
+let test: "testando"
+
+function showDirection(direction: "left" | "right" | "center") {
+    console.log(`A direção é ${direction}`);
+}
