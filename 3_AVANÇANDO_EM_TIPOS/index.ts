@@ -175,3 +175,14 @@ console.log(p!.innerText);
 let n: bigint;
 
 n = 1000n;
+
+//Symbol
+
+//Symbol cria uma referência única para um valor
+//Mesmo que ele possua o mesmo valor de outra variável, teremos valores sendo considerados diferentes
+
+let symbolA: symbol = Symbol("a")
+let symbolB: symbol = Symbol("a")
+
+console.log(symbolA === symbolB); //irá imprimir FALSE
+
