@@ -153,3 +153,16 @@ let test: "testando"
 function showDirection(direction: "left" | "right" | "center") {
     console.log(`A direção é ${direction}`);
 }
+
+//NON-NULL ASSERTION OPERATOR
+
+//As vezes o ts pode evidenciar um erro, baseado em um valor que no momento do código ainda não está disponível
+//Porém se sabemos que este valor será preenchido, podemos evitar o erro
+//Utilizamos o caractere !
+
+//selecionar um elemento html por id para mostrar o seu valor
+
+const p = document.getElementById("some-p")
+
+console.log(p!.innerText);
+
