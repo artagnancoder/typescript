@@ -16,4 +16,27 @@ let alpha: Array<string> = ['a', 'b', 'c']
 
 let data: any[] = ['a', 1, 'b', 2]
 
+//functions tipadas - argumentos
+
+//sintaxe: function minhaFuncao(argumento: tipo){}
+
+function soma(a: number, b: number) {
+    console.log(a + b);
+}
+
+//functions tipadas - retorno
+
+//sintaxe: function minhaFuncao(argumento: tipo):tipo{}
+
+function greeting(name: string): string {
+    return `Ola ${name}`
+}
+
+//funções anônimas
+
+//set timeOut executa algo depois de um tempo determinado.
+setTimeout(function(){
+
+    const sllary: number = 1000;
+}, 2000)
 
