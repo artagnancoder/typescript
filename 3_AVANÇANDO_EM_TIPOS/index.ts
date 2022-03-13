@@ -166,3 +166,12 @@ const p = document.getElementById("some-p")
 
 console.log(p!.innerText);
 
+//Bigint
+
+//usado para declarar valores altos
+//podemos utilizar a notação literal, exemplo: 100n
+//Para este recurso precisamos mudar a configuração do TS para a versão ES2020
+
+let n: bigint;
+
+n = 1000n;
