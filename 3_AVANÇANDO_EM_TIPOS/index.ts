@@ -81,8 +81,8 @@ const array2: Array<number | string | boolean> = [2, 'teste', true];
 
 //pode- se usar o typeof para fazer validações relacionadas
 
-function showUserRole(role: boolean | string){
-    if(typeof role === "boolean"){
+function showUserRole(role: boolean | string) {
+    if (typeof role === "boolean") {
         return "usuário não aprovado!"
     }
 
@@ -96,3 +96,48 @@ type ID = string | number // <= ALIAS
 function showId(id: ID) {
     console.log(`O Id é: ${id}`);   //Uma forma de resumir valores
 }
+
+//INTERFACES
+
+//Maneira de nomear um tipo de objeto
+//Podemos determinar um nome para o tipo e escolher as propriedades e seus tipos
+
+//Usada também para tipar objetos
+interface POINT {
+    x: number,
+    y: number,
+    z: number
+}
+
+function showCoords(obj: POINT) {
+    console.log(obj);
+}
+
+const coordObj: POINT = {
+    x: 10,
+    y: 20,
+    z: 40
+}
+
+//INTERFACE X TYPE ALIAS
+
+//A diferença entre alias e interface é que a interface pode ser alterada ao longo do código.
+
+interface Person {
+    name: string
+}
+                       
+interface Person {     //A propriedade age foi implementada na interface Person
+    age: number
+}
+
+
+const somePerson: Person = {name: "Igor", age: 25}
+
+type personType = {
+    name: string
+}
+
+/*type personType = {  //Erro de variável duplicada
+    age: number
+} */
