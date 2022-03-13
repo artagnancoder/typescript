@@ -88,3 +88,11 @@ function showUserRole(role: boolean | string){
 
     return `A função do usuário é: ${role}`
 }
+
+//type alias- recurso que permite criar um tipo e determinar o que ele verifica
+
+type ID = string | number // <= ALIAS
+
+function showId(id: ID) {
+    console.log(`O Id é: ${id}`);   //Uma forma de resumir valores
+}
