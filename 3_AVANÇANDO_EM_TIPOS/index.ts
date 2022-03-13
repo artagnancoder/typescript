@@ -35,7 +35,7 @@ function greeting(name: string): string {
 //funções anônimas
 
 //set timeOut executa algo depois de um tempo determinado.
-setTimeout(function(){
+setTimeout(function () {
 
     const sllary: number = 1000;
 }, 2000)
@@ -44,29 +44,38 @@ setTimeout(function(){
 
 //sintaxe {prop: tipo, prop2: tipo}
 
-function passCoordinates(coord: {x: number, y: number}){
+function passCoordinates(coord: { x: number, y: number }) {
     console.log('X coordinates: ' + coord.x);
-    console.log('X coordinates: ' + coord.y);    
+    console.log('X coordinates: ' + coord.y);
 }
 
-const objCoord = { x: 321, y: 13.0}
+const objCoord = { x: 321, y: 13.0 }
 
 passCoordinates(objCoord)
 
 //propriedades opcionais
 //sintaxe {prop: tipo, prop2?: tipo} / prop2 torna-se opcional
 
-function showNumbers(a: number, b: number, c?: number){
-    console.log(a, b, c); 
+function showNumbers(a: number, b: number, c?: number) {
+    console.log(a, b, c);
 }
 
 //validação de propriedades/argumentos opcionais
 
 //nunca declarar os argumentos opcionais primeiro
-function advancedGreeting(firstName: string, lastName?: string){
-    if(lastName !== undefined){
-       return console.log(`Olá, ${firstName} ${lastName}, tudo bem?`);       //early return
-    } 
-        console.log(`Olá ${firstName}, tudo bem?`);
+function advancedGreeting(firstName: string, lastName?: string) {
+    if (lastName !== undefined) {
+        return console.log(`Olá, ${firstName} ${lastName}, tudo bem?`);       //early return
+    }
+    console.log(`Olá ${firstName}, tudo bem?`);
 }
+
+//Union types - declarar dois tipos para um dado
+
+function showBalanca(balance: number | string) {
+    console.log(`O saldo da conta é R${balance}`);
+}
+
+//array de múltiplos valores
+const array2: Array<number | string | boolean> = [2, 'teste', true];
 
