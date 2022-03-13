@@ -79,3 +79,12 @@ function showBalanca(balance: number | string) {
 //array de múltiplos valores
 const array2: Array<number | string | boolean> = [2, 'teste', true];
 
+//pode- se usar o typeof para fazer validações relacionadas
+
+function showUserRole(role: boolean | string){
+    if(typeof role === "boolean"){
+        return "usuário não aprovado!"
+    }
+
+    return `A função do usuário é: ${role}`
+}
