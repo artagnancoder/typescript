@@ -40,3 +40,33 @@ setTimeout(function(){
     const sllary: number = 1000;
 }, 2000)
 
+//Objetos
+
+//sintaxe {prop: tipo, prop2: tipo}
+
+function passCoordinates(coord: {x: number, y: number}){
+    console.log('X coordinates: ' + coord.x);
+    console.log('X coordinates: ' + coord.y);    
+}
+
+const objCoord = { x: 321, y: 13.0}
+
+passCoordinates(objCoord)
+
+//propriedades opcionais
+//sintaxe {prop: tipo, prop2?: tipo} / prop2 torna-se opcional
+
+function showNumbers(a: number, b: number, c?: number){
+    console.log(a, b, c); 
+}
+
+//validação de propriedades/argumentos opcionais
+
+//nunca declarar os argumentos opcionais primeiro
+function advancedGreeting(firstName: string, lastName?: string){
+    if(lastName !== undefined){
+       return console.log(`Olá, ${firstName} ${lastName}, tudo bem?`);       //early return
+    } 
+        console.log(`Olá ${firstName}, tudo bem?`);
+}
+
